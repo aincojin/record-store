@@ -1,0 +1,15 @@
+
+export default[
+    {
+        id:1,
+        image:"oomph.jpg"
+    },
+    {
+        id:2,
+        image:"tame-impala.jpg"
+    },
+    {
+        id:3,
+        image:"sade.png"
+    },
+]
