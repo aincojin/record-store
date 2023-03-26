@@ -1,7 +1,8 @@
 
 
 import './App.css';
-import Catalogue from './pages/catalogue/catalogue';
+// import Catalogue from './pages/catalogue/catalogue';
+import CatalogueNew from './pages/catalogue/catalogue_new';
 import About from './pages/about/about'
 import SignInForm from './pages/sign-in/SignInForm';
 import NoMatch from './pages/NoMatch';
@@ -18,7 +19,7 @@ const App = () => {
     <>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/catalogue' element={<Catalogue/>}/>
+        <Route path='/catalogue' element={<CatalogueNew/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/sign-in' element={<SignInForm/>}/>
         <Route path='/log-in' element={<LogInForm/>}/>
