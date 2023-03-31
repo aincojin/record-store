@@ -13,8 +13,8 @@ const Nnavbar = () => {
                         src="./assets/images/logo.png" alt="record logo"/>
                 </div>
                 <div className="Rnav">
-                    <img className="navicon"src="./assets/images/searchicon.svg" alt="search"/>
-                    <img className="navicon"src="./assets/images/usericon.svg" alt="user"/>
+                    <img className="navicon" src="./assets/images/searchicon.svg" alt="search"/>
+                    <img className="navicon" onClick={()=>navigate('/log-in')} src="./assets/images/usericon.svg" alt="user"/>
                     <img className="navicon"src="./assets/images/carticon.svg" alt="cart"/>
                 </div>
             </nav>

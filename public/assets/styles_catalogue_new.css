@@ -23,19 +23,21 @@
     color: rgb(255, 255, 255);
 }
 .catalogName{
-    background-color: #601006;
+    background-image: linear-gradient(to right,black,#601006, black );
+    /* background-color: #601006; */
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
     font-weight: 300;
+    text-shadow: 0 0 5px black;
 }
 .divScroll{
     display:flex;
     margin: 150px 30px; 
     gap:30px;
-    -ms-overflow-style: none;
+    
 }
 .catalogScroll{
     display: flex;
@@ -53,15 +55,26 @@
 .Card h3{
     font-weight: 300;
 }
+.Card:hover{
+   text-shadow: 0 0 15px rgb(255, 255, 255);
+   font-size: 18px;
+}
 .genreCard{
     background-color: rgb(13, 31, 47);
     width: 215px;
     height:215px;
     margin-bottom: 20px;
 }
-
-.Rarrow:hover{
+.genreCard:hover{
+    transform: scale(1.07);
+}
+.Rarrow, .Larrow{
+    position: relative;
+}
+.Rarrow:hover,
+.Larrow:hover{
     transform: scale(1.1);
-    background-color: rgba(240, 248, 255, 0.193);
+    background-color: rgba(97, 101, 104, 0.227);
 }
   
+

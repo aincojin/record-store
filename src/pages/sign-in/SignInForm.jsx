@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-class SignInForm extends React.Component{
-    render(){
+export default function SignInForm(){
+    const navigate = useNavigate()
         return(
             <>
             <div className="back_btn">
-                    <button className="back_button" ><Link to='/' style={{color:'#c4c2b8', textDecoration: 'none'}}>Go Back</Link></button>
+                    <button className="back_button" onClick={()=> navigate(-1)} style={{color:'#c4c2b8', textDecoration: 'none'}}>Go Back</button>
                 </div>
             <div className="container">
                 
@@ -39,6 +39,5 @@ class SignInForm extends React.Component{
             </div>
             </>
         )
-    }
+    
 }
-export default SignInForm

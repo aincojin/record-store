@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-class LogInForm extends React.Component{
-    render(){
+export default function  LogInForm(){
+    const navigate = useNavigate()
         return(
             <>
                 <div className="back_btn">
-                    <button className="back_button" ><Link to='/' style={{color:'#c4c2b8', textDecoration: 'none'}}>Go Back</Link></button>
+                    <button className="back_button" onClick={()=> navigate(-1)} style={{color:'#c4c2b8', textDecoration: 'none'}}>Go Back</button>
                 </div>
                 <div className="container">
                     <div className="box">
@@ -28,12 +29,12 @@ class LogInForm extends React.Component{
                             </div>
 
                             <button className="login_button" type="submit" style={{color:'#c4c2b8', textDecoration:'none'}}>Log In</button>
-                            <div className="signup_link"><Link to='/sign-in' style={{color:'#c4c2b8'}}>Don't have an Account?</Link></div>
+                            <div className="signup_link" ><Link to='/sign-in' style={{color:'#c4c2b8'}}>Don't have an Account?</Link></div>
                         </form>
                     </div>
                 </div>
             </>
         )
-    }
+   
+    
 }
-export default LogInForm

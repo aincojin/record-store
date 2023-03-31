@@ -1,12 +1,12 @@
 import React from "react";
 
 import Nnavbar from "../../components/Nnavbar";
-import CatalogueGenreData from "./CatalogueGenreData";
+import CatalogueGenreData from "./CatalogueGenreData.json";
 import CatalogueGenreCard from "./CatalogueGenreCard";
 
 export default function CatalogueNew(){
 
-    
+   
   
     const genreCards = CatalogueGenreData.map(item => {
         return(
@@ -25,12 +25,26 @@ export default function CatalogueNew(){
                 <div className="catalogName">CATALOGUE</div>
 
                 <div className="divScroll">
-                    <img className="Larrow" src="./assets/images/arrowL.svg" alt="arrow-left"/>
-                    <div className="catalogScroll">
+                     <img className="Larrow" 
+                        onClick ={ () => {
+                                document.getElementById("container").scrollLeft -= 245;
+                                }}
+                        style={{height:"225px", width:"70px"}}
+                        src="./assets/images/icons/arrowL.svg" alt="arrow-left"/> 
+
+                    <div id="container" className="catalogScroll">
                         {genreCards}
                     </div>
-                    <img className="Rarrow" src="./assets/images/arrowR.svg" alt="arrow-right"/>
+
+                    <img className="Rarrow" 
+                        onClick ={ () => {
+                            document.getElementById("container").scrollLeft += 245;
+                        }}
+                        style={{height:"225px", width:"70px"}}
+                        src="./assets/images/icons/arrowR.svg" alt="arrow-right"/>
+
                 </div>
+                
             </>
 
 
